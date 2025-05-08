@@ -16,7 +16,7 @@ graph LR;
 ```
 
 ### Goal
-Implement a multi-step process where the output of one step feeds into the next.
+Process data through a series of dependent steps where each step builds on the previous one.
 
 ## 2. Parallel
 **Alias**: Fan-Out/Gather
@@ -38,7 +38,7 @@ graph LR;
 ```
 
 ### Goal
- Execute independent tasks simultaneously to reduce **latency**, then combine their outputs.
+Distribute tasks across multiple agents simultaneously and consolidate results to improve efficiency.
 
 ## 3. Coordinator
 **Alias**: Coordinator/Dispatcher Pattern, Group Chat
@@ -60,10 +60,10 @@ graph LR;
 ```
 
 ### Goal
-Route incoming requests to the appropriate specialist agent.
+Manage workflow between specialist agents to leverage their unique capabilities effectively.
 
 ## 4. Reflection
-**Alias**: Review/Critique Pattern , Generator-Critic, Evaluator-optimizer
+**Alias**: Review/Critique Pattern, Generator-Critic, Evaluator-optimizer
 
 ### Pattern
 ```mermaid
@@ -79,7 +79,7 @@ graph LR;
 ```
 
 ### Goal
-Improve the quality or validity of generated output by having a dedicated agent review it.
+Enhance output quality through iterative feedback and refinement cycles.
 
 ## 5. Handoffs
 **Alias**: Swarm
@@ -103,4 +103,22 @@ graph LR;
 ```
 
 ### Goal
-Let agent delegate tasks to other agents using a special tool call.
+Enable dynamic task delegation between agents based on expertise and availability.
+
+## 6. Human in the loop
+### Pattern
+```mermaid
+graph LR;
+In(("In")):::input-->AgentA;
+AgentA-->Human;
+Human-->|Option 1|AgentB;
+Human-->|Option 2|AgentC;
+AgentB-->Out1(("Out 1")):::output;
+AgentC-->Out2(("Out 2")):::output;
+
+classDef input fill:#93c5fd;
+classDef output fill:#86efac;
+```
+
+### Goal
+Integrate human expertise and judgment at critical decision points in automated workflows.

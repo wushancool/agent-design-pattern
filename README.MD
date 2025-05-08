@@ -41,7 +41,7 @@ graph LR;
 Distribute tasks across multiple agents simultaneously and consolidate results to improve efficiency.
 
 ## 3. Coordinator
-**Alias**: Coordinator/Dispatcher Pattern, Group Chat
+**Alias**: Coordinator/Dispatcher Pattern, Group Chat, Supervisor-Worker pattern
 
 ### Pattern
 ```mermaid
